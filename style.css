@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+:root {
+  /* Primary */
+  --main-color: hsl(233, 47%, 7%);
+  --second-color: hsl(244, 38%, 16%);
+  --main-modal-color: hsl(277, 64%, 61%);
+  /* Neutral */
+  --white-100: hsl(0, 0%, 100%);
+  --white-75: hsl(0, 0%, 100%, 0.75);
+  --white-60: hsl(0, 0%, 100%, 0.6);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--main-color);
+}
+
+#main {
+  align-items: center;
+  background-color: var(--second-color);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 90vw;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+#main .people {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  background: url("images/image-header-mobile.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#main .people::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(277, 88%, 25%, 0.6);
+  position: absolute;
+}
+
+#main h1 {
+  color: var(--white-100);
+  text-align: center;
+  margin: 1rem auto;
+  width: 90%;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#main h1 > span {
+  color: var(--main-modal-color);
+}
+
+#main p {
+  width: 80%;
+  line-height: 1.8rem;
+  text-align: center;
+  color: var(--white-75);
+  margin-bottom: 2rem;
+}
+
+#main .cards {
+  height: 30vh;
+}
+
+#main .card {
+  text-align: center;
+}
+
+#main .card {
+  color: var(--white-60);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.card span {
+  color: var(--white-100);
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: inherit;
+  font-family: sans-serif;
+}
+
+.card:first-child span {
+  text-transform: lowercase;
+}
